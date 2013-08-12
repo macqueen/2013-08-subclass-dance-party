@@ -14,4 +14,3 @@ BlinkyDancer.prototype.step = function(timeBetweenSteps){
    * other effects you can use on a jQuery-wrapped html tag. */
   this.$node.toggle();
 };
-
