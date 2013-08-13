@@ -70,6 +70,16 @@
             window.dancers[i].lineup(side);
           }
         });
+
+        $("body").on('mouseenter', '.tinyDancer', function(event){
+          var audio = $(this).children();
+          audio[0].pause();
+        });
+
+        $("body").on('mouseleave', '.tinyDancer', function(event){
+          var audio = $(this).children();
+          audio[0].play();
+        });
       });
     </script>
 
