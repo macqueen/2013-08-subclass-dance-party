@@ -22,3 +22,23 @@ GrowingDancer.prototype.changeSize = function() {
     }, 1000);
   }, 2000);
 };
+
+GrowingDancer.prototype.changeColor = function() {
+  var parsePxToInt = function(pxValue) {
+    return parseInt(pxValue.slice(0, -2));
+  };
+  var dancer = this;
+  var left = parsePxToInt(dancer.$node.css('left'));
+  var top = parsePxToInt(dancer.$node.css('top'));
+
+  for (var i = 0; i < window.dancers.length; i++) {
+    if (window.dancers[i] !== dancer) {
+      var dancerLeft = parsePxToInt(window.dancers[i].$node.css('left'));
+      var dancerTop = parsePxToInt(window.dancers[i].$node.css('top'));
+
+      if (Math.sqrt(Math.pow((dancerLeft - left), 2) + Math.pow(dancerTop - top,2)) < 100) {
+        dancer.$node.css('border-color', 'purple');
+      }
+    }
+  }
+};
