@@ -23,6 +23,12 @@
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="SpinningDancer">add a spinning dancer</a>
       <a href="#" class="addDancerButton" data-dancer-maker-function-name="TinyDancer">add a tiny elton dancer</a>
     </div>
+    <div class="lineup">
+      <a href="#" class="lineUpButton" data-lineup-side="top">Top</a>
+      <a href="#" class="lineUpButton" data-lineup-side="bottom">Bottom</a>
+      <a href="#" class="lineUpButton" data-lineup-side="left">Left</a>
+      <a href="#" class="lineUpButton" data-lineup-side="right">Right</a>
+    </div>
 
     <script>
       $(document).ready(function(){
@@ -53,7 +59,16 @@
             Math.random() * 1000
           );
 
+          window.dancers.push(dancer);
+
           $('body').append(dancer.$node);
+        });
+
+        $(".lineUpButton").on("click", function(event){
+          var side = $(this).data('lineup-side');
+          for (var i = 0; i < window.dancers.length; i++){
+            window.dancers[i].lineup(side);
+          }
         });
       });
     </script>
