@@ -45,11 +45,12 @@ body, a:link, a:visited, a:active{
   -webkit-animation: rotating 2s linear infinite;
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 .star-five {
    margin: 50px 0;
-   position: relative;
+   position: absolute;
    display: block;
    color: yellow;
    width: 0px;
