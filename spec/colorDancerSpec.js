@@ -14,7 +14,7 @@ describe("colorDancer", function() {
   });
 
   describe("dance", function(){
-    it("should call step at least once per second", function(){
+    it("should change color", function(){
       clock.tick(timeBetweenSteps);
       clock.tick(timeBetweenSteps);
       clock.tick(timeBetweenSteps);
