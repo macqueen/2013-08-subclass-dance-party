@@ -1,7 +1,9 @@
 var eltonJohnUrl = 'http://assets.rollingstone.com/assets/images/story/weekend-rock-question-what-is-elton-johns-best-song-20121123/1000x306/20121121-elton-x600-1353526455.jpg';
 
 var TinyDancer = function(top, left, timeBetweenSteps){
-  Dancer.call(this, top, left, timeBetweenSteps, $('<img class="tinyDancer" src="' + eltonJohnUrl + '"><audio src="tinyDancer.mp3" autoplay></audio></img>'));
+  var node = $('<img class="tinyDancer" src="' + eltonJohnUrl + '"></img>');
+  node.append('<audio src="tinyDancer.mp3" autoplay></audio>');
+  Dancer.call(this, top, left, timeBetweenSteps, node);
 };
 
 TinyDancer.prototype = Object.create(Dancer.prototype);
