@@ -9,11 +9,3 @@ SpinningDancer.prototype.step = function(timeBetweenSteps){
   // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this, timeBetweenSteps);
 };
-
-// SpinningDancer.prototype.spin = function() {
-//   var dancer = this;
-
-//   setInterval(function() {
-//     //dancer.$node.animate({});
-//   }, 4000);
-// };
