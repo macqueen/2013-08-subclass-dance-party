@@ -30,5 +30,12 @@ Dancer.prototype.setPosition = function(top, left){
 Dancer.prototype.lineup = function(side) {
   var cssObj = {};
   cssObj[side] = 0;
+  if (side === 'right' ) {
+    this.$node.css('left','');
+  }
+  else if (side === 'bottom') {
+    this.$node.css('top','');
+  }
   this.$node.animate(cssObj, 2000);
 };
+
