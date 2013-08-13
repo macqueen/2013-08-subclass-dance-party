@@ -10,6 +10,5 @@ TinyDancer.prototype = Object.create(Dancer.prototype);
 TinyDancer.prototype.constructor = TinyDancer;
 
 TinyDancer.prototype.step = function(timeBetweenSteps){
-  // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this, timeBetweenSteps);
 };

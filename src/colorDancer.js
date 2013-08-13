@@ -8,7 +8,6 @@ ColorDancer.prototype = Object.create(Dancer.prototype);
 ColorDancer.prototype.constructor = ColorDancer;
 
 ColorDancer.prototype.step = function(timeBetweenSteps){
-  // call the old version of step at the beginning of any call to this new version of step
   Dancer.prototype.step.call(this, timeBetweenSteps);
 };
 
