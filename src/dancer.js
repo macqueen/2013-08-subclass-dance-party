@@ -26,3 +26,9 @@ Dancer.prototype.setPosition = function(top, left){
   };
   this.$node.css(styleSettings);
 };
+
+Dancer.prototype.lineup = function(side) {
+  var cssObj = {};
+  cssObj[side] = 0;
+  this.$node.animate(cssObj, 2000);
+};
